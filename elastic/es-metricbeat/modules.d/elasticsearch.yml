@@ -1,0 +1,17 @@
+- module: elasticsearch
+  metricsets:
+    # 不知道是啥,暂时不收集
+    # - ccr
+    - cluster_stats
+    - enrich
+    - index
+    - index_recovery
+    - index_summary
+    - ml_job
+    - node_stats
+    - shard
+  period: 10s
+  hosts: ["http://elasticsearch:9200"]
+  username: "elastic"
+  password: "NQMurKsC2CnlnjUk"
+  xpack.enabled: true

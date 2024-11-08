@@ -1,0 +1,10 @@
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  username: "elastic"
+  password: "NQMurKsC2CnlnjUk"
+apm-server:
+  host: "0.0.0.0:8200"
+  rum:
+    enabled: true
+  secret_token: NQMurKsC2CnlnjUk
+max_procs: 16

@@ -1,0 +1,8 @@
+- module: kibana
+  metricsets:
+    - stats
+  period: 10s
+  hosts: ["kibana:5601"]
+  username: "kibana_system"
+  password: "NQMurKsC2CnlnjUk"
+  xpack.enabled: true

@@ -1,0 +1,11 @@
+network.host: 0.0.0.0
+discovery.type: single-node
+xpack.security.enabled: true
+xpack.security.authc.api_key.enabled: true
+http.cors.allow-methods: ["PUT", "POST", "GET"]
+xpack.monitoring.collection.enabled: true
+xpack.monitoring.elasticsearch.collection.enabled: false
+# 控制监控保留时间
+xpack.monitoring.history.duration: 3d
+# 节点名称
+node.name: example-dev-1

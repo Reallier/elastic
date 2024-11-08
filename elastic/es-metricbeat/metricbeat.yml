@@ -1,0 +1,31 @@
+metricbeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: true
+  reload.period: 10s
+
+setup.kibana:
+  host: "kibana:5601"
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+  protocol: "http"
+  username: "gzzchh"
+  password: "2young2simple"
+
+processors:
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+  - add_kubernetes_metadata: ~
+
+setup.template:
+  enabled: true
+  overwrite: false
+  settings:
+    index.number_of_shards: 1
+
+setup.ilm.enabled: auto
+setup.ilm.policy_name: "es-self-metric-policy"
+setup.ilm.rollover_alias: "es-self-metric"
+setup.ilm.pattern: "{now/d}-000001"
+setup.ilm.overwrite: true

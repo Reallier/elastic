@@ -1,0 +1,10 @@
+server.host: "0.0.0.0"
+server.name: kibounohana
+elasticsearch.hosts: ["http://elasticsearch:9200"]
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "i2odPIt8jeSxaepjukvD"
+i18n.locale: "zh-CN"
+csp.strict: true
+monitoring.kibana.collection.enabled: false
+xpack.encryptedSavedObjects.encryptionKey: "PWWmmkAyFskkhOLPtk1MaNnq4iTpoSYW"
+xpack.fleet.agents.tlsCheckDisabled: true
